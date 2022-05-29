@@ -51,13 +51,13 @@ const Header = ({ isErrorPage }) => {
     <header className={`site-header ${!onTop ? 'site-header--fixed' : ''}`}>
       <div className="container">
         <Link href="/">
-          <a><h1 className="site-logo"><Logo />E-Shop</h1></a>
+          <a><h1 className="site-logo"><Logo />POSTURE</h1></a>
         </Link>
         <nav ref={navRef} className={`site-nav ${menuOpen ? 'site-nav--open' : ''}`}>
           <Link href="/products">
-            <a>Products</a>
+            <a>Kinétherapeutes</a>
           </Link>
-          <a href="#">Inspiration</a>
+          <a href="#">about us</a>
           <a href="#">Rooms</a>
           <button className="site-nav__btn"><p>Account</p></button>
         </nav>
