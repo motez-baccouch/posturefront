@@ -13,22 +13,22 @@ const IndexPage = () => {
         <div className="container">
           <article style={{backgroundImage: 'url(/images/featured-1.jpg)'}} className="featured-item featured-item-large">
             <div className="featured-item__content">
-              <h3>New arrivals are now in!</h3>
-              <a href="#" className="btn btn--rounded">Show Collection</a>
+              <h3>DECOUVRE LE DOMAINE DE KINETHERAPIE</h3>
+              <a href="#" className="btn btn--rounded">VOIR</a>
             </div>
           </article>
           
           <article style={{backgroundImage: 'url(/images/featured-2.jpg)'}} className="featured-item featured-item-small-first">
             <div className="featured-item__content">
-              <h3>Basic t-shirts $29,99</h3>
-              <a href="#" className="btn btn--rounded">More details</a>
+              <h3>des kinés professional</h3>
+              <a href="#" className="btn btn--rounded">PLUS DE DETAILS</a>
             </div>
           </article>
           
           <article style={{backgroundImage: 'url(/images/featured-3.jpg)'}} className="featured-item featured-item-small">
             <div className="featured-item__content">
-              <h3>Sale this summer</h3>
-              <a href="#" className="btn btn--rounded">VIEW ALL</a>
+              <h3>promotions ramadon</h3>
+              <a href="#" className="btn btn--rounded">VOIR TOUT</a>
             </div>
           </article>
         </div>
@@ -37,40 +37,39 @@ const IndexPage = () => {
       <section className="section">
         <div className="container">
           <header className="section__intro">
-            <h4>Why should you choose us?</h4>
+            <h4>pourquoi tu devrais nous choisir?</h4>
           </header>
 
           <ul className="shop-data-items">
             <li>
               <i className="icon-shipping"></i>
               <div className="data-item__content">
-                <h4>Free Shipping</h4>
-                <p>All purchases over $199 are eligible for free shipping via USPS First Class Mail.</p>
+                <h4>Des kinés a domicile </h4>
+                <p>vous pouvez choisir l'un des nombreux physiothérapeutes qui peuvent se déplacer jusqu'à vous</p>
               </div>
             </li>
             
             <li>
               <i className="icon-payment"></i>
               <div className="data-item__content">
-                <h4>Easy Payments</h4>
-                <p>All payments are processed instantly over a secure payment protocol.</p>
+                <h4>Paiement facile</h4>
+                <p>Tous les paiements sont traités instantanément via un protocole de paiement sécurisé.</p>
               </div>
             </li>
             
             <li>
               <i className="icon-cash"></i>
               <div className="data-item__content">
-                <h4>Money-Back Guarantee</h4>
-                <p>If an item arrived damaged or you've changed your mind, you can send it
-                back for a full refund.</p>
+                <h4>Garantie de remboursement</h4>
+                <p>Si un physiothérapeute n'a pas pu vous joindre ou si vous avez changé d'avis, vous pouvez toujours demander un remboursement complet.</p>
               </div>
             </li>
             
             <li>
               <i className="icon-materials"></i>
               <div className="data-item__content">
-                <h4>Finest Quality</h4>
-                <p>Designed to last, each of our products has been crafted with the finest materials.</p>
+                <h4>meilleurs physiothérapeutes</h4>
+                <p>nous avons choisi les meilleurs physiothérapeutes du pays juste pour vous</p>
               </div>
             </li>
           </ul>

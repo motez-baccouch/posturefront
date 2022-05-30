@@ -6,9 +6,10 @@ const Footer = () => {
       <div className="container">
         <div className="site-footer__top">
           <div className="site-footer__description">
-            <h6><Logo /> <span>E</span>-Shop</h6>
-            <p>House My Brand designs clothing for the young, the old & everyone in between – but most 
-              importantly, for the fashionable</p>
+            <h6><img src="/images/logo.png" /> </h6>
+            <p>tu as mal au dos? pas de soucis, nous vous indiquons les kinés près de chez vous. ou les faire venir à vous.
+              POSTURE.. MAKE YOUR BACK GREAT AGAIN !
+            </p>
             <ul className="site-footer__social-networks">
               <li><a href="#"><i className="icon-facebook"></i></a></li>
               <li><a href="#"><i className="icon-twitter"></i></a></li>
@@ -37,8 +38,8 @@ const Footer = () => {
             </ul>
             <ul>
               <li>Contact</li>
-              <li><a href="#">store@uikit.com</a></li>
-              <li><a href="#">Hotline: +1 131 138 138</a></li>
+              <li><a href="#">posture@gmail.com</a></li>
+              <li><a href="#">Hotline: +216 25 860 600</a></li>
             </ul>
           </div>
         </div>
@@ -46,7 +47,7 @@ const Footer = () => {
       
       <div className="site-footer__bottom">
         <div className="container">
-          <p>DESIGN BY ICEO.CO - © 2019. ALL RIGHTS RESERVED.</p>
+          <p>projet GL3 2022</p>
         </div>
       </div>
     </footer>

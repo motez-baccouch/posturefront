@@ -37,24 +37,24 @@ const PageIntro = () => {
             <li>
               <i className="icon-shipping"></i>
               <div className="data-item__content">
-                <h4>Free Shipping</h4>
-                <p>On purchases over $199</p>
+                <h4>des kinés a domicile</h4>
+                <p>a bas prix</p>
               </div>
             </li>
             
             <li>
               <i className="icon-shipping"></i>
               <div className="data-item__content">
-                <h4>99% Satisfied Customers</h4>
-                <p>Our clients' opinions speak for themselves</p>
+                <h4>99% de clients satisfaits</h4>
+                <p>Les avis de nos clients parlent d'eux-mêmes</p>
               </div>
             </li>
             
             <li>
               <i className="icon-cash"></i>
               <div className="data-item__content">
-                <h4>Originality Guaranteed</h4>
-                <p>30 days warranty for each product from our store</p>
+                <h4>Les meilleurs Kinétherapeutes</h4>
+                <p>just pour toi</p>
               </div>
             </li>
           </ul>
