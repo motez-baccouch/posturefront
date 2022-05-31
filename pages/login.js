@@ -9,16 +9,22 @@ import Axios from "axios";
 
 
 const LoginPage = () => {
+  if(localStorage.getItem("access_token")){
+    window.location = "/profile";
+  }
+  
   const { register, handleSubmit, errors } = useForm();
-
   const onSubmit = async data => {
     const res = await Axios.post('http://localhost:3001/user/login', {
       username: data.email,
       password: data.password
     });
+    console.log(res.status);
+    if(199<res.status < 300){
     const token = res.data.access_token;
     localStorage.setItem("access_token", token);
-    window.location = "/"
+    window.location = "/"}
+    
 
   };
 
