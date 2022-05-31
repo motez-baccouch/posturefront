@@ -6,7 +6,6 @@ import { toggleFavProduct } from './../../store/actions/userActions';
 const ProductItem = ({ productImage, id, name,lastname, price, currentPrice, numero }) => {
   const dispatch = useDispatch();
   const { favProducts } = useSelector(state => state.user);
-  console.log(productImage);
   const isFavourite = some(favProducts, productId => productId === id);
   const toggleFav = () => {
     dispatch(toggleFavProduct(

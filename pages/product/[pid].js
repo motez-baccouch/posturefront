@@ -48,9 +48,6 @@ const Product = ({ product }) => {
         </div>
       </section>
 
-      <div className="product-single-page">
-        <ProductsFeatured />
-      </div>
       <Footer />
     </Layout>
   );

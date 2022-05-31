@@ -10,7 +10,7 @@ import Axios from "axios";
 
 const LoginPage = () => {
   if(localStorage.getItem("access_token")){
-    window.location = "/profile";
+    window.location = "/profileCard";
   }
   
   const { register, handleSubmit, errors } = useForm();

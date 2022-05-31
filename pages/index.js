@@ -75,8 +75,6 @@ const IndexPage = () => {
           </ul>
         </div>
       </section>
-
-      <ProductsFeatured />
       <Subscribe />
       <Footer />
     </Layout>
