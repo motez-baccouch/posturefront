@@ -8,7 +8,6 @@ const Test = (props) => {
   return (
     <div>
     
-      <h1>Home</h1>
       <ol>
         {posts[0].map((post) => (
          
