@@ -3,15 +3,23 @@ import Link from 'next/link';
 import { useForm } from "react-hook-form";
 import { server } from '../utils/server'; 
 import { postData } from '../utils/services'; 
+import Axios from "axios";
+
+
+
 
 const LoginPage = () => {
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = async data => {
-    const res = await postData(`${server}/api/login`, {
-      email: data.email,
+    const res = await Axios.post('http://localhost:3001/user/login', {
+      username: data.email,
       password: data.password
     });
+    const token = res.data.access_token;
+    localStorage.setItem("access_token", token);
+    window.location = "/"
+
   };
 
   return (
@@ -26,7 +34,7 @@ const LoginPage = () => {
 
           <div className="form-block">
             <h2 className="form-block__title">Log in</h2>
-            <p className="form-block__description">Lorem Ipsum is simply dummy text of the printing and typesetting 
+            <p className="form-block__description">motez Ipsum is simply dummy text of the printing and typesetting 
             industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
             
             <form className="form" onSubmit={handleSubmit(onSubmit)}>
