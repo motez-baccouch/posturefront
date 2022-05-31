@@ -22,6 +22,7 @@ const ProductsContent = (props) => {
               productImage={item.photoUrl} 
               name={item.prenom}
               lastname={item.nom}
+              numero={item.numero}
             />
           ))}
         </section>

@@ -3,12 +3,11 @@ import { some } from 'lodash';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleFavProduct } from './../../store/actions/userActions';
 
-const ProductItem = ({ discount, productImage, id, name,lastname, price, currentPrice }) => {
+const ProductItem = ({ productImage, id, name,lastname, price, currentPrice, numero }) => {
   const dispatch = useDispatch();
   const { favProducts } = useSelector(state => state.user);
-
+  console.log(productImage);
   const isFavourite = some(favProducts, productId => productId === id);
-
   const toggleFav = () => {
     dispatch(toggleFavProduct(
       { 
@@ -30,6 +29,7 @@ const ProductItem = ({ discount, productImage, id, name,lastname, price, current
       
       <div className="product__description">
         <h3>{name + " " + lastname}</h3>
+        <h2>contact : {numero}</h2>
       </div>
     </div>
   )
