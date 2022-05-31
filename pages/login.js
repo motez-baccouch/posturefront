@@ -12,6 +12,7 @@ const LoginPage = () => {
   if(localStorage.getItem("access_token")){
     window.location = "/profile";
   }
+  
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = async data => {
     const res = await Axios.post('http://localhost:3001/user/login', {

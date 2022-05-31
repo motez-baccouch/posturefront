@@ -5,6 +5,7 @@ import Logo from '../../assets/icons/logo';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+
 const Header = ({ isErrorPage }) => {
   const router = useRouter();
   const { cartItems } = useSelector(state => state.cart);
@@ -83,6 +84,11 @@ const Header = ({ isErrorPage }) => {
           <Link href="/login">
             <button className="site-header__btn-avatar"><i className="icon-avatar"></i></button>
           </Link>
+
+          <Link href="/login">
+            <button className="site-header__btn-avatar">disconnect</button>
+          </Link>
+         
           <button 
             onClick={() => setMenuOpen(true)} 
             className="site-header__btn-menu">
