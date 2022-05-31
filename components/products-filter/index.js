@@ -5,7 +5,7 @@ import CheckboxColor from './form-builder/checkbox-color';
 import Slider from 'rc-slider';
 import Tooltip from 'rc-tooltip';
 import { useForm } from "react-hook-form";
-
+import Axios from "axios";
 // data
 import productsTypes from './../../utils/data/products-types';
 import productsColors from './../../utils/data/products-colors';
@@ -48,46 +48,50 @@ const ProductsFilter = () => {
       
       <div className={`products-filter__wrapper ${filtersOpen ? 'products-filter__wrapper--open' : ''}`}>
         <div className="products-filter__block">
-          <button type="button">Product type</button>
+          <button type="button">Gender</button>
           <div className="products-filter__block__content">
-            {productsTypes.map(type => (
-              <Checkbox 
-                key={type.id} 
+          <Checkbox 
+                key={0} 
                 name="product-type" 
-                label={type.name} 
+                label={"Male"}
+                onChange={onFilterChange} 
               />
-            ))}
+              <Checkbox 
+                key={1} 
+                name="product-type" 
+                label={"Female"}
+                onChange={o => {
+                  onFilterChange("Female")
+                }} 
+              />
           </div>
         </div>
 
         <div className="products-filter__block">
-          <button type="button">Price</button>
+          <button type="button">Age</button>
           <div className="products-filter__block__content">
-            <Range min={0} max={20} defaultValue={[3, 10]} tipFormatter={value => `${value}%`} />
+            <Range min={25} max={70} defaultValue={[3, 10]} tipFormatter={value => `${value}`} />
           </div>
         </div>
         
         <div className="products-filter__block">
-          <button type="button">Size</button>
+          <button type="button">CITY</button>
           <div className="products-filter__block__content checkbox-square-wrapper">
-            {productsSizes.map(type => (
-              <Checkbox 
+          <Checkbox 
                 type="square" 
-                key={type.id} 
+                key={0} 
                 name="product-size" 
-                label={type.label} />
-            ))}
-          </div>
-        </div>
-        
-        <div className="products-filter__block">
-          <button type="button">Color</button>
-          <div className="products-filter__block__content">
-            <div className="checkbox-color-wrapper">
-              {productsColors.map(type => (
-                <CheckboxColor key={type.id} name="product-color" color={type.color} />
-              ))}
-            </div>
+                label={"TUNIS"} />
+                <Checkbox 
+                type="square" 
+                key={1} 
+                name="product-size" 
+                label={"SFAX"} />
+                <Checkbox 
+                type="square" 
+                key={2} 
+                name="product-size" 
+                label={"SOUSSE"} />
           </div>
         </div>
 
@@ -98,4 +102,11 @@ const ProductsFilter = () => {
 }
   
 export default ProductsFilter
+
+export const onFilterChange = async (gender) => {
+  const res = await Axios.get("http://localhost:3001/user/kine/filter?gender="+gender);
+  return {
+    props: { data: res.data.slice(0, 10) },
+  };
+};
   
