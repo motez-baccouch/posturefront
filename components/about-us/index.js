@@ -20,7 +20,17 @@ const About = () => (
         </div>
             </li>
             <li>
-                 <h1> MEET THE TEAM</h1>
+                 <br /> <br /> <br /> <br /><br /> <br /> <br /> 
+                 <header className="section__intro">
+            <h4>Meet LES DESVS!</h4>
+            <font size="+3">
+            nous sommes des étudiants en génie logiciel de 3e année, des rêveurs ambitieux qui aspirent à devenir de grands innovateurs et développeurs en laissant libre cours à notre vaste imagination dans notre travail.
+"POSTURE" était le fruit d'efforts acharnés et une grande expérience pleine de grands moments tristes, maladroits, joyeux .
+alors sans plus tarder voici les devs !
+      </font>
+            <h4>hover on the pictures</h4>
+          </header>
+
             </li>
             
             <li>
