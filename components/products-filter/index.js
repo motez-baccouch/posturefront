@@ -92,8 +92,8 @@ const ProductsFilter = (props) => {
                 
           </div>
         </div>
-        <div className="products-filter__block">
-        <button type="button" onClick={clearFilters}>Click Me!</button>
+        <div className="products-filter__block" onClick={clearFilters}>
+        <button type="button" >Click here to clear filters</button>
         </div>
 
         <button type="submit" className="btn btn-submit btn--rounded btn--yellow">Apply</button>
