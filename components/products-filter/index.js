@@ -16,6 +16,7 @@ const Range = createSliderWithTooltip(Slider.Range);
 const { Handle } = Slider;
 
 const handle = props => {
+  
   const { value, dragging, index, ...restProps } = props;
   return (
     <Tooltip
@@ -30,12 +31,22 @@ const handle = props => {
   );
 };
 
-const ProductsFilter = () => {
+const ProductsFilter = (props) => {
+  const onChangeValueGender = (e) => {
+    props.getParamsCallback(e.target.value,null)
+  }
+  const onChangeValueVille= (e) => {
+    props.getParamsCallback(null,e.target.value)
+  }
   const router = useRouter();
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   const addQueryParams = () => {
     // query params changes
+  }
+  const clearFilters = (e) => {
+    window.location.reload();
+    props.clearFilters();
   }
 
   return (
@@ -49,50 +60,40 @@ const ProductsFilter = () => {
       <div className={`products-filter__wrapper ${filtersOpen ? 'products-filter__wrapper--open' : ''}`}>
         <div className="products-filter__block">
           <button type="button">Gender</button>
-          <div className="products-filter__block__content">
-          <Checkbox 
-                key={0} 
-                name="product-type" 
-                label={"Male"}
-                onChange={onFilterChange} 
-              />
-              <Checkbox 
-                key={1} 
-                name="product-type" 
-                label={"Female"}
-                onChange={o => {
-                  onFilterChange("Female")
-                }} 
-              />
-          </div>
-        </div>
-
-        <div className="products-filter__block">
-          <button type="button">Age</button>
-          <div className="products-filter__block__content">
-            <Range min={25} max={70} defaultValue={[3, 10]} tipFormatter={value => `${value}`} />
+          <div className="products-filter__block__content" onChange={onChangeValueGender}>
+          <label className="checkbox">
+		          <input name="product-type"type="radio" id="0" value="Male"/>
+		        <span className="checkbox__check"></span>
+    	      <p>Male</p>
+	            </label>
+              <label className="checkbox">
+		          <input name="product-type"type="radio" id="1" value="Female" />
+		        <span className="checkbox__check"></span>
+    	      <p>Female</p>
+	            </label>
           </div>
         </div>
         
         <div className="products-filter__block">
           <button type="button">CITY</button>
-          <div className="products-filter__block__content checkbox-square-wrapper">
-          <Checkbox 
-                type="square" 
-                key={0} 
-                name="product-size" 
-                label={"TUNIS"} />
-                <Checkbox 
-                type="square" 
-                key={1} 
-                name="product-size" 
-                label={"SFAX"} />
-                <Checkbox 
-                type="square" 
-                key={2} 
-                name="product-size" 
-                label={"SOUSSE"} />
+          <div className="products-filter__block__content checkbox-square-wrapper" onChange={onChangeValueVille}>
+          <label for="TUNIS-product-size" class="checkbox checkbox--square">
+            <input name="product-size" type="radio" id="TUNIS-product-size" value="tunis"/><span class="checkbox__check"/>
+            <p>TUNIS</p>
+            </label>
+            <label for="SFAX-product-size" class="checkbox checkbox--square">
+            <input name="product-size" type="radio" id="SFAX-product-size" value="sfax"/><span class="checkbox__check"/>
+            <p>SFAX</p>
+            </label>
+            <label for="SOUSSE-product-size" class="checkbox checkbox--square">
+            <input name="product-size" type="radio" id="SOUSSE-product-size" value="sousse"/><span class="checkbox__check"/>
+            <p>SOUSSE</p>
+            </label>
+                
           </div>
+        </div>
+        <div className="products-filter__block">
+        <button type="button" onClick={clearFilters}>Click Me!</button>
         </div>
 
         <button type="submit" className="btn btn-submit btn--rounded btn--yellow">Apply</button>
@@ -110,3 +111,6 @@ export const onFilterChange = async (gender) => {
   };
 };
   
+function onCheckBoxChange(){
+  console.log(this.checked)
+}
