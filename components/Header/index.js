@@ -61,6 +61,9 @@ const Header = ({ isErrorPage }) => {
           <Link href="/about-us">
           <a>about us</a>
           </Link>
+          <Link href="/education">
+          <a>c'est quoi la kinetherapie ?</a>
+          </Link>
         </nav>
 
         <div className="site-header__actions">

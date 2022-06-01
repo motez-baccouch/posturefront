@@ -14,3 +14,4 @@ const ProfileCard = (id) => {
       </Layout>
     )
   }
+  export default ProfileCard;
