@@ -55,7 +55,7 @@ const Header = ({ isErrorPage }) => {
           <a><h1 className="site-logo"> <img src="/images/logo.png"  /></h1></a>
         </Link>
         <nav ref={navRef} className={`site-nav ${menuOpen ? 'site-nav--open' : ''}`}>
-          <Link href="/products">
+          <Link href="/kines">
             <a>Kinétherapeutes</a>
           </Link>
           <Link href="/about-us">

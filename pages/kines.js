@@ -5,7 +5,7 @@ import ProductsFilter from '../components/products-filter';
 import ProductsContent from '../components/products-content';
 import Axios from "axios";
 
-const Products = (props) => (
+const Kines = (props) => (
   <Layout>
     <Breadcrumb />
     <section className="products-page">
@@ -18,7 +18,7 @@ const Products = (props) => (
   </Layout>
 )
   
-export default Products
+export default Kines
 
 export const getStaticProps = async () => {
   const res = await Axios.get("http://localhost:3001/user/kine/filter");
