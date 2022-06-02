@@ -267,7 +267,7 @@ const RegisterPage = () => {
                 <button type="button" className="btn-social google-btn"><img src="/images/icons/gmail.svg" alt="gmail" /> Gmail</button>
               </div>
 
-              <button type="submit" className="btn btn--rounded btn--yellow btn-submit">Sign in</button>
+              <button type="submit" className="btn btn--rounded btn--yellow btn-submit no-padding-top">Register</button>
 
               <p className="form__signup-link">Already a member? <a href="/login">Sign up</a></p>
             </form>

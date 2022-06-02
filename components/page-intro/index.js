@@ -13,7 +13,7 @@ const PageIntro = () => {
             <div className="container">
               <div className="page-intro__slide__content">
                 <h2>rencontrer les meilleurs kinésithérapeutes</h2>
-                <a href="#" className="btn-shop"><i className="icon-right"></i>corrigez votre posture maintenant </a>
+                <a href="/kines" className="btn-shop"><i className="icon-right"></i>corrigez votre posture maintenant </a>
               </div>
             </div>
           </div>
@@ -24,7 +24,7 @@ const PageIntro = () => {
             <div className="container">
               <div className="page-intro__slide__content">
                 <h2>plus de mal de dos!</h2>
-                <a href="#" className="btn-shop"><i className="icon-right"></i>corrigez votre posture maintenant !</a>
+                <a href="/kines" className="btn-shop"><i className="icon-right"></i>corrigez votre posture maintenant !</a>
               </div>
             </div>
           </div>

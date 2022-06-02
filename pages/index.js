@@ -14,14 +14,14 @@ const IndexPage = () => {
           <article style={{backgroundImage: 'url(/images/featured-1.jpg)'}} className="featured-item featured-item-large">
             <div className="featured-item__content">
               <h3>DECOUVRE LE DOMAINE DE KINETHERAPIE</h3>
-              <a href="#" className="btn btn--rounded">VOIR</a>
+              <a href="/education" className="btn btn--rounded">VOIR</a>
             </div>
           </article>
           
           <article style={{backgroundImage: 'url(/images/featured-2.jpg)'}} className="featured-item featured-item-small-first">
             <div className="featured-item__content">
               <h3>des kinés professional</h3>
-              <a href="#" className="btn btn--rounded">PLUS DE DETAILS</a>
+              <a href="/kines" className="btn btn--rounded">PLUS DE DETAILS</a>
             </div>
           </article>
           

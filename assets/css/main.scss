@@ -3099,6 +3099,7 @@ $text-color: #363738;
     background: rgba(#333, 0.9);
     transition: 300ms ease-in-out;
   }
+ 
   .blog-card__head {
     height: 300px;
     display: flex;
@@ -3180,4 +3181,8 @@ a.icon-link {
   &.btn--only-icon {
     width: 50px;
   }
+}
+
+.no-padding-top {
+  padding-top : 0px !important;
 }
